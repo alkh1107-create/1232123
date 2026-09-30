@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#141b1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Фотоискатель · найти кадр</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="topbar">
+      <a class="brand" href="#camera" aria-label="Фотоискатель"><span class="brand-icon">▧</span><span>ФОТО<span>ИСКАТЕЛЬ</span></span></a>
+      <div class="top-actions"><span class="ai-status" id="ai-status"><i></i> ИИ · ожидание</span><button class="icon-button" id="screen-toggle" aria-label="Переключить вид">⛶</button></div>
+    </header>
+
+    <section class="page camera-page active" id="page-camera" aria-label="Камера">
+      <div class="viewport" id="viewport">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div class="scan-line"></div>
+        <div class="start-card" id="start-card">
+          <span class="start-mark">▧</span><h1>Найди свой кадр</h1>
+          <p>Наводи камеру — подскажу ракурс, свет и как расположить объект.</p>
+          <button class="pixel-button primary" id="start-camera">ВКЛЮЧИТЬ КАМЕРУ <b>↗</b></button>
+          <small>Анализ идёт на телефоне. Фото никуда не загружаются.</small>
+        </div>
+        <div class="camera-topline">
+          <span class="frame-score" id="score-badge"><b>—</b><small>КАДР</small></span>
+          <span class="record-pill"><i></i> ПОИСК</span>
+          <button class="icon-button glass-button" id="torch-button" aria-label="Вспышка" hidden>⚡</button>
+        </div>
+        <div class="scene-note" id="scene-note"><span class="note-dot"></span><span id="scene-message">Наведи камеру, чтобы начать поиск</span></div>
+        <div class="camera-bottomline">
+          <button class="small-chip" id="lens-button" disabled>↻ <span>КАМЕРА</span></button>
+          <button class="shutter" id="capture-button" aria-label="Сделать фото" disabled><span></span></button>
+          <button class="small-chip" id="manual-button" disabled>◒ <span>СВЕТ</span></button>
+        </div>
+        <span class="resolution-tag" id="resolution-tag">—</span>
+      </div>
+
+      <div class="camera-tools">
+        <div class="level-readout"><span class="level-icon">⊖</span><span><b id="level-number">—°</b><small>ГОРИЗОНТ</small></span><i class="level-track"><em id="level-indicator"></em></i></div>
+        <div class="tool-readout"><span><small>СВЕТ</small><b id="light-readout">—</b></span><span><small>РЕЗКОСТЬ</small><b id="sharp-readout">—</b></span><span><small>ЗНАЧЕНИЕ</small><b id="exposure-readout">АВТО</b></span></div>
+      </div>
+    </section>
+
+    <section class="page gallery-page" id="page-gallery" aria-label="Снимки">
+      <div class="page-heading"><div><p class="overline">ТВОЯ ПЛЁНКА</p><h1>Снимки <span id="photo-count">0</span></h1></div><button class="pixel-button secondary" id="back-camera">КАМЕРА ↗</button></div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <div class="empty-gallery" id="empty-gallery"><span>▧</span><b>Плёнка пока пустая</b><p>Хороший кадр можно сохранить с экрана камеры.</p></div>
+    </section>
+
+    <section class="page editor-page" id="page-editor" aria-label="Проявка фотографии">
+      <div class="page-heading editor-heading"><div><p class="overline">ЛАБОРАТОРИЯ</p><h1>Проявка</h1></div><div class="editor-head-actions"><button class="pixel-button secondary auto-button" id="auto-enhance">✦ АВТО</button><button class="icon-button" id="close-editor" aria-label="Закрыть редактор">×</button></div></div>
+      <div class="editor-preview" id="editor-preview-wrap"><canvas id="editor-canvas"></canvas><div class="editor-empty" id="editor-empty">Выбери снимок<br>из своей плёнки</div></div>
+      <div class="presets" id="presets"><button class="preset selected" data-preset="natural"><i></i><b>ЧИСТО</b></button><button class="preset" data-preset="warm"><i></i><b>ЗАКАТ</b></button><button class="preset" data-preset="mono"><i></i><b>Ч/Б</b></button><button class="preset" data-preset="vivid"><i></i><b>ЯРКО</b></button></div>
+      <div class="edit-controls">
+        <label><span>Экспозиция</span><output id="edit-exposure-value">0</output><input id="edit-exposure" type="range" min="-50" max="50" value="0"></label>
+        <label><span>Контраст</span><output id="edit-contrast-value">0</output><input id="edit-contrast" type="range" min="-30" max="40" value="0"></label>
+        <label><span>Цвет</span><output id="edit-color-value">0</output><input id="edit-color" type="range" min="-40" max="40" value="0"></label>
+      </div>
+      <div class="editor-actions"><button class="pixel-button secondary" id="reset-edit">СБРОСИТЬ</button><button class="pixel-button primary" id="save-edit">СОХРАНИТЬ КОПИЮ <b>↗</b></button></div>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Разделы приложения">
+      <button class="nav-item active" data-page="camera"><span>▧</span><small>НАВЕСТИ</small></button>
+      <button class="nav-item" data-page="gallery"><span>▦</span><small>ПЛЁНКА</small><i id="nav-count" hidden></i></button>
+      <button class="nav-item" data-page="editor"><span>✳</span><small>ПРОЯВИТЬ</small></button>
+    </nav>
+
+    <dialog class="control-sheet" id="control-sheet">
+      <div class="sheet-handle"></div><div class="sheet-heading"><div><p class="overline">КАМЕРА</p><h2>Экспозиция</h2></div><button class="icon-button" id="close-sheet" aria-label="Закрыть">×</button></div>
+      <div class="mode-switch"><button class="selected" id="auto-mode">АВТО</button><button id="manual-mode">РУЧНОЙ</button></div>
+      <p class="sheet-info" id="camera-support">Проверяю возможности камеры…</p>
+      <label class="camera-control"><span>ISO <b id="iso-label">АВТО</b></span><input id="iso-control" type="range" disabled></label>
+      <label class="camera-control"><span>Выдержка <b id="shutter-label">АВТО</b></span><input id="shutter-control" type="range" disabled></label>
+      <label class="camera-control"><span>Экспокоррекция <b id="ev-label">0 EV</b></span><input id="ev-control" type="range" min="-2" max="2" value="0" step="0.1" disabled></label>
+      <label class="camera-control" id="zoom-row" hidden><span>Зум <b id="zoom-label">1×</b></span><input id="zoom-control" type="range"></label>
+      <button class="pixel-button primary sheet-done" id="sheet-done">ГОТОВО</button>
+    </dialog>
+    <div class="toast" id="toast" role="status"></div>
+  </main>
+  <canvas id="analysis-canvas" width="160" height="120" hidden></canvas>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

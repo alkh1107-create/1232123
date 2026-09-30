@@ -1,0 +1,1202 @@
+{
+  "name": "NIMA MobileNet AVA",
+  "kerasVersion": "2.1.6",
+  "architecture": "Keras 2.1.6 MobileNet v1 alpha=1, symmetric padding, GAP, Dense(10), softmax",
+  "input": {
+    "shape": [
+      1,
+      224,
+      224,
+      3
+    ],
+    "range": [
+      -1,
+      1
+    ],
+    "order": "RGB"
+  },
+  "source": "https://github.com/idealo/image-quality-assessment",
+  "commit": "dceaf7c2d218bc6e80b21d6e147e3b56a21b7f31",
+  "sourceSHA256": "e563ad91b3d47410e45f7238f07ab8f6abd1bd0c4b18a4b0af9c681a21a91cb2",
+  "weightsSHA256": "a9a38435822becd9a828df6fce78df0936507b963c44893b7bec6dec6eefeb1d",
+  "weights": [
+    {
+      "name": "conv1/kernel",
+      "shape": [
+        3,
+        3,
+        3,
+        32
+      ],
+      "offset": 0,
+      "length": 864
+    },
+    {
+      "name": "conv1_bn/beta",
+      "shape": [
+        32
+      ],
+      "offset": 3456,
+      "length": 32
+    },
+    {
+      "name": "conv1_bn/gamma",
+      "shape": [
+        32
+      ],
+      "offset": 3584,
+      "length": 32
+    },
+    {
+      "name": "conv1_bn/moving_mean",
+      "shape": [
+        32
+      ],
+      "offset": 3712,
+      "length": 32
+    },
+    {
+      "name": "conv1_bn/moving_variance",
+      "shape": [
+        32
+      ],
+      "offset": 3840,
+      "length": 32
+    },
+    {
+      "name": "conv_dw_1/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        32,
+        1
+      ],
+      "offset": 3968,
+      "length": 288
+    },
+    {
+      "name": "conv_dw_10/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        512,
+        1
+      ],
+      "offset": 5120,
+      "length": 4608
+    },
+    {
+      "name": "conv_dw_10_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 23552,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_10_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 25600,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_10_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 27648,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_10_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 29696,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_11/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        512,
+        1
+      ],
+      "offset": 31744,
+      "length": 4608
+    },
+    {
+      "name": "conv_dw_11_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 50176,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_11_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 52224,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_11_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 54272,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_11_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 56320,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_12/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        512,
+        1
+      ],
+      "offset": 58368,
+      "length": 4608
+    },
+    {
+      "name": "conv_dw_12_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 76800,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_12_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 78848,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_12_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 80896,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_12_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 82944,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_13/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        1024,
+        1
+      ],
+      "offset": 84992,
+      "length": 9216
+    },
+    {
+      "name": "conv_dw_13_bn/beta",
+      "shape": [
+        1024
+      ],
+      "offset": 121856,
+      "length": 1024
+    },
+    {
+      "name": "conv_dw_13_bn/gamma",
+      "shape": [
+        1024
+      ],
+      "offset": 125952,
+      "length": 1024
+    },
+    {
+      "name": "conv_dw_13_bn/moving_mean",
+      "shape": [
+        1024
+      ],
+      "offset": 130048,
+      "length": 1024
+    },
+    {
+      "name": "conv_dw_13_bn/moving_variance",
+      "shape": [
+        1024
+      ],
+      "offset": 134144,
+      "length": 1024
+    },
+    {
+      "name": "conv_dw_1_bn/beta",
+      "shape": [
+        32
+      ],
+      "offset": 138240,
+      "length": 32
+    },
+    {
+      "name": "conv_dw_1_bn/gamma",
+      "shape": [
+        32
+      ],
+      "offset": 138368,
+      "length": 32
+    },
+    {
+      "name": "conv_dw_1_bn/moving_mean",
+      "shape": [
+        32
+      ],
+      "offset": 138496,
+      "length": 32
+    },
+    {
+      "name": "conv_dw_1_bn/moving_variance",
+      "shape": [
+        32
+      ],
+      "offset": 138624,
+      "length": 32
+    },
+    {
+      "name": "conv_dw_2/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        64,
+        1
+      ],
+      "offset": 138752,
+      "length": 576
+    },
+    {
+      "name": "conv_dw_2_bn/beta",
+      "shape": [
+        64
+      ],
+      "offset": 141056,
+      "length": 64
+    },
+    {
+      "name": "conv_dw_2_bn/gamma",
+      "shape": [
+        64
+      ],
+      "offset": 141312,
+      "length": 64
+    },
+    {
+      "name": "conv_dw_2_bn/moving_mean",
+      "shape": [
+        64
+      ],
+      "offset": 141568,
+      "length": 64
+    },
+    {
+      "name": "conv_dw_2_bn/moving_variance",
+      "shape": [
+        64
+      ],
+      "offset": 141824,
+      "length": 64
+    },
+    {
+      "name": "conv_dw_3/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        128,
+        1
+      ],
+      "offset": 142080,
+      "length": 1152
+    },
+    {
+      "name": "conv_dw_3_bn/beta",
+      "shape": [
+        128
+      ],
+      "offset": 146688,
+      "length": 128
+    },
+    {
+      "name": "conv_dw_3_bn/gamma",
+      "shape": [
+        128
+      ],
+      "offset": 147200,
+      "length": 128
+    },
+    {
+      "name": "conv_dw_3_bn/moving_mean",
+      "shape": [
+        128
+      ],
+      "offset": 147712,
+      "length": 128
+    },
+    {
+      "name": "conv_dw_3_bn/moving_variance",
+      "shape": [
+        128
+      ],
+      "offset": 148224,
+      "length": 128
+    },
+    {
+      "name": "conv_dw_4/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        128,
+        1
+      ],
+      "offset": 148736,
+      "length": 1152
+    },
+    {
+      "name": "conv_dw_4_bn/beta",
+      "shape": [
+        128
+      ],
+      "offset": 153344,
+      "length": 128
+    },
+    {
+      "name": "conv_dw_4_bn/gamma",
+      "shape": [
+        128
+      ],
+      "offset": 153856,
+      "length": 128
+    },
+    {
+      "name": "conv_dw_4_bn/moving_mean",
+      "shape": [
+        128
+      ],
+      "offset": 154368,
+      "length": 128
+    },
+    {
+      "name": "conv_dw_4_bn/moving_variance",
+      "shape": [
+        128
+      ],
+      "offset": 154880,
+      "length": 128
+    },
+    {
+      "name": "conv_dw_5/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        256,
+        1
+      ],
+      "offset": 155392,
+      "length": 2304
+    },
+    {
+      "name": "conv_dw_5_bn/beta",
+      "shape": [
+        256
+      ],
+      "offset": 164608,
+      "length": 256
+    },
+    {
+      "name": "conv_dw_5_bn/gamma",
+      "shape": [
+        256
+      ],
+      "offset": 165632,
+      "length": 256
+    },
+    {
+      "name": "conv_dw_5_bn/moving_mean",
+      "shape": [
+        256
+      ],
+      "offset": 166656,
+      "length": 256
+    },
+    {
+      "name": "conv_dw_5_bn/moving_variance",
+      "shape": [
+        256
+      ],
+      "offset": 167680,
+      "length": 256
+    },
+    {
+      "name": "conv_dw_6/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        256,
+        1
+      ],
+      "offset": 168704,
+      "length": 2304
+    },
+    {
+      "name": "conv_dw_6_bn/beta",
+      "shape": [
+        256
+      ],
+      "offset": 177920,
+      "length": 256
+    },
+    {
+      "name": "conv_dw_6_bn/gamma",
+      "shape": [
+        256
+      ],
+      "offset": 178944,
+      "length": 256
+    },
+    {
+      "name": "conv_dw_6_bn/moving_mean",
+      "shape": [
+        256
+      ],
+      "offset": 179968,
+      "length": 256
+    },
+    {
+      "name": "conv_dw_6_bn/moving_variance",
+      "shape": [
+        256
+      ],
+      "offset": 180992,
+      "length": 256
+    },
+    {
+      "name": "conv_dw_7/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        512,
+        1
+      ],
+      "offset": 182016,
+      "length": 4608
+    },
+    {
+      "name": "conv_dw_7_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 200448,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_7_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 202496,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_7_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 204544,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_7_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 206592,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_8/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        512,
+        1
+      ],
+      "offset": 208640,
+      "length": 4608
+    },
+    {
+      "name": "conv_dw_8_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 227072,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_8_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 229120,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_8_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 231168,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_8_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 233216,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_9/depthwise_kernel",
+      "shape": [
+        3,
+        3,
+        512,
+        1
+      ],
+      "offset": 235264,
+      "length": 4608
+    },
+    {
+      "name": "conv_dw_9_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 253696,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_9_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 255744,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_9_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 257792,
+      "length": 512
+    },
+    {
+      "name": "conv_dw_9_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 259840,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_1/kernel",
+      "shape": [
+        1,
+        1,
+        32,
+        64
+      ],
+      "offset": 261888,
+      "length": 2048
+    },
+    {
+      "name": "conv_pw_10/kernel",
+      "shape": [
+        1,
+        1,
+        512,
+        512
+      ],
+      "offset": 270080,
+      "length": 262144
+    },
+    {
+      "name": "conv_pw_10_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 1318656,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_10_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 1320704,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_10_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 1322752,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_10_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 1324800,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_11/kernel",
+      "shape": [
+        1,
+        1,
+        512,
+        512
+      ],
+      "offset": 1326848,
+      "length": 262144
+    },
+    {
+      "name": "conv_pw_11_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 2375424,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_11_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 2377472,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_11_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 2379520,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_11_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 2381568,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_12/kernel",
+      "shape": [
+        1,
+        1,
+        512,
+        1024
+      ],
+      "offset": 2383616,
+      "length": 524288
+    },
+    {
+      "name": "conv_pw_12_bn/beta",
+      "shape": [
+        1024
+      ],
+      "offset": 4480768,
+      "length": 1024
+    },
+    {
+      "name": "conv_pw_12_bn/gamma",
+      "shape": [
+        1024
+      ],
+      "offset": 4484864,
+      "length": 1024
+    },
+    {
+      "name": "conv_pw_12_bn/moving_mean",
+      "shape": [
+        1024
+      ],
+      "offset": 4488960,
+      "length": 1024
+    },
+    {
+      "name": "conv_pw_12_bn/moving_variance",
+      "shape": [
+        1024
+      ],
+      "offset": 4493056,
+      "length": 1024
+    },
+    {
+      "name": "conv_pw_13/kernel",
+      "shape": [
+        1,
+        1,
+        1024,
+        1024
+      ],
+      "offset": 4497152,
+      "length": 1048576
+    },
+    {
+      "name": "conv_pw_13_bn/beta",
+      "shape": [
+        1024
+      ],
+      "offset": 8691456,
+      "length": 1024
+    },
+    {
+      "name": "conv_pw_13_bn/gamma",
+      "shape": [
+        1024
+      ],
+      "offset": 8695552,
+      "length": 1024
+    },
+    {
+      "name": "conv_pw_13_bn/moving_mean",
+      "shape": [
+        1024
+      ],
+      "offset": 8699648,
+      "length": 1024
+    },
+    {
+      "name": "conv_pw_13_bn/moving_variance",
+      "shape": [
+        1024
+      ],
+      "offset": 8703744,
+      "length": 1024
+    },
+    {
+      "name": "conv_pw_1_bn/beta",
+      "shape": [
+        64
+      ],
+      "offset": 8707840,
+      "length": 64
+    },
+    {
+      "name": "conv_pw_1_bn/gamma",
+      "shape": [
+        64
+      ],
+      "offset": 8708096,
+      "length": 64
+    },
+    {
+      "name": "conv_pw_1_bn/moving_mean",
+      "shape": [
+        64
+      ],
+      "offset": 8708352,
+      "length": 64
+    },
+    {
+      "name": "conv_pw_1_bn/moving_variance",
+      "shape": [
+        64
+      ],
+      "offset": 8708608,
+      "length": 64
+    },
+    {
+      "name": "conv_pw_2/kernel",
+      "shape": [
+        1,
+        1,
+        64,
+        128
+      ],
+      "offset": 8708864,
+      "length": 8192
+    },
+    {
+      "name": "conv_pw_2_bn/beta",
+      "shape": [
+        128
+      ],
+      "offset": 8741632,
+      "length": 128
+    },
+    {
+      "name": "conv_pw_2_bn/gamma",
+      "shape": [
+        128
+      ],
+      "offset": 8742144,
+      "length": 128
+    },
+    {
+      "name": "conv_pw_2_bn/moving_mean",
+      "shape": [
+        128
+      ],
+      "offset": 8742656,
+      "length": 128
+    },
+    {
+      "name": "conv_pw_2_bn/moving_variance",
+      "shape": [
+        128
+      ],
+      "offset": 8743168,
+      "length": 128
+    },
+    {
+      "name": "conv_pw_3/kernel",
+      "shape": [
+        1,
+        1,
+        128,
+        128
+      ],
+      "offset": 8743680,
+      "length": 16384
+    },
+    {
+      "name": "conv_pw_3_bn/beta",
+      "shape": [
+        128
+      ],
+      "offset": 8809216,
+      "length": 128
+    },
+    {
+      "name": "conv_pw_3_bn/gamma",
+      "shape": [
+        128
+      ],
+      "offset": 8809728,
+      "length": 128
+    },
+    {
+      "name": "conv_pw_3_bn/moving_mean",
+      "shape": [
+        128
+      ],
+      "offset": 8810240,
+      "length": 128
+    },
+    {
+      "name": "conv_pw_3_bn/moving_variance",
+      "shape": [
+        128
+      ],
+      "offset": 8810752,
+      "length": 128
+    },
+    {
+      "name": "conv_pw_4/kernel",
+      "shape": [
+        1,
+        1,
+        128,
+        256
+      ],
+      "offset": 8811264,
+      "length": 32768
+    },
+    {
+      "name": "conv_pw_4_bn/beta",
+      "shape": [
+        256
+      ],
+      "offset": 8942336,
+      "length": 256
+    },
+    {
+      "name": "conv_pw_4_bn/gamma",
+      "shape": [
+        256
+      ],
+      "offset": 8943360,
+      "length": 256
+    },
+    {
+      "name": "conv_pw_4_bn/moving_mean",
+      "shape": [
+        256
+      ],
+      "offset": 8944384,
+      "length": 256
+    },
+    {
+      "name": "conv_pw_4_bn/moving_variance",
+      "shape": [
+        256
+      ],
+      "offset": 8945408,
+      "length": 256
+    },
+    {
+      "name": "conv_pw_5/kernel",
+      "shape": [
+        1,
+        1,
+        256,
+        256
+      ],
+      "offset": 8946432,
+      "length": 65536
+    },
+    {
+      "name": "conv_pw_5_bn/beta",
+      "shape": [
+        256
+      ],
+      "offset": 9208576,
+      "length": 256
+    },
+    {
+      "name": "conv_pw_5_bn/gamma",
+      "shape": [
+        256
+      ],
+      "offset": 9209600,
+      "length": 256
+    },
+    {
+      "name": "conv_pw_5_bn/moving_mean",
+      "shape": [
+        256
+      ],
+      "offset": 9210624,
+      "length": 256
+    },
+    {
+      "name": "conv_pw_5_bn/moving_variance",
+      "shape": [
+        256
+      ],
+      "offset": 9211648,
+      "length": 256
+    },
+    {
+      "name": "conv_pw_6/kernel",
+      "shape": [
+        1,
+        1,
+        256,
+        512
+      ],
+      "offset": 9212672,
+      "length": 131072
+    },
+    {
+      "name": "conv_pw_6_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 9736960,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_6_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 9739008,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_6_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 9741056,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_6_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 9743104,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_7/kernel",
+      "shape": [
+        1,
+        1,
+        512,
+        512
+      ],
+      "offset": 9745152,
+      "length": 262144
+    },
+    {
+      "name": "conv_pw_7_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 10793728,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_7_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 10795776,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_7_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 10797824,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_7_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 10799872,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_8/kernel",
+      "shape": [
+        1,
+        1,
+        512,
+        512
+      ],
+      "offset": 10801920,
+      "length": 262144
+    },
+    {
+      "name": "conv_pw_8_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 11850496,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_8_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 11852544,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_8_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 11854592,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_8_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 11856640,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_9/kernel",
+      "shape": [
+        1,
+        1,
+        512,
+        512
+      ],
+      "offset": 11858688,
+      "length": 262144
+    },
+    {
+      "name": "conv_pw_9_bn/beta",
+      "shape": [
+        512
+      ],
+      "offset": 12907264,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_9_bn/gamma",
+      "shape": [
+        512
+      ],
+      "offset": 12909312,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_9_bn/moving_mean",
+      "shape": [
+        512
+      ],
+      "offset": 12911360,
+      "length": 512
+    },
+    {
+      "name": "conv_pw_9_bn/moving_variance",
+      "shape": [
+        512
+      ],
+      "offset": 12913408,
+      "length": 512
+    },
+    {
+      "name": "dense_1/bias",
+      "shape": [
+        10
+      ],
+      "offset": 12915456,
+      "length": 10
+    },
+    {
+      "name": "dense_1/kernel",
+      "shape": [
+        1024,
+        10
+      ],
+      "offset": 12915496,
+      "length": 10240
+    }
+  ]
+}
